@@ -9,13 +9,29 @@
 # Follow-up: what if you can't use division?
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+def productList(list):
+
+    newArray = []
+    for index in range(0,len(list)):
+        value = 1
+        for i in range(0,len(list)):
+            if index != i:
+                value *= list[i]
+        newArray.append(value)
+    return newArray
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    inputList = [1,2,3,4,5]
+    print("Input array: ",inputList)
+    newArray = productList(inputList)
+    print("Product array:",newArray)
+    print()
+
+    inputList = [3, 2, 1]
+    print("Input array: ", inputList)
+    newArray = productList(inputList)
+    print("Product array:", newArray)
+    print()
+
