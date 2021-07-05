@@ -20,6 +20,21 @@ def productList(list):
         newArray.append(value)
     return newArray
 
+def divisionList(list):
+
+    newArray = []
+    for index in range(0,len(list)):
+        value = 0
+        for i in range(0,len(list)):
+            if index != i:
+                if value == 0:
+                    value = list[i]
+                else:
+                    value /= list[i]
+        newArray.append("%.4f" % value)
+    return newArray
+
+
 
 if __name__ == '__main__':
 
@@ -27,11 +42,16 @@ if __name__ == '__main__':
     print("Input array: ",inputList)
     newArray = productList(inputList)
     print("Product array:",newArray)
+    newArray = divisionList(inputList)
+
+    print("Division array:",newArray)
     print()
 
     inputList = [3, 2, 1]
     print("Input array: ", inputList)
     newArray = productList(inputList)
     print("Product array:", newArray)
+    newArray = divisionList(inputList)
+    print("Division array:", newArray)
     print()
 
