@@ -7,7 +7,7 @@ If our input was [3, 2, 1], the expected output would be [2, 3, 6].
 
 Follow-up: what if you can't use division?
 
-# Techmologies
+# Technologies
 
 * Python 3.8
 
